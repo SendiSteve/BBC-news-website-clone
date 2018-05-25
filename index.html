@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home - BBC Sport</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 1100px;
+        height: 40px;
+    }
+
+    #navbar-top {
+
+        border-top: 1px solid #ccc;
+    }
+
+    #logo {
+        margin-top: 8px;
+        width: 100px;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .topbar-section {
+        border-left: 1px solid #ccc;
+        float: left;
+        height: 100%;
+    }
+
+    #signin-image {
+        margin: 8px;
+        float: left;
+    }
+
+    #signin-text {
+        position: relative;
+        top: 14px;
+        margin-left: 2px;
+        font-weight: bold;
+        font-size: 90%;
+        padding-right: 50px;
+    }
+
+    .topbar-menu {
+        font-size: 90%;
+        font-weight: bold;
+        float: left;
+        padding: 14px 10px 0;
+        height: 26px;
+    }
+
+    #more-dropdown-arrow {
+        padding-left: 50px;
+    }
+
+    #search-input {
+        background: #E4E4E4E4;
+        float: left;
+        border: none;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 5px;
+        position: relative;
+        top: -12px;
+        margin: 5px 0 5px 5px;
+    }
+
+    #search-magnify {
+        height: 27px;
+        margin-top: -7px;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    /* Middlebar section */
+
+    .middlebar {
+        width: 100%;
+        height: 80px;
+        background: #ffd32a;
+        border-top: 1px solid #CCC;
+    }
+
+    .menubar {
+        margin: 0 auto;
+        width: 1100px;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 40px;
+        padding-top: 15px;
+        margin: 0;
+    }
+
+    .menu {
+        height: 40px;
+
+    }
+
+    .menu-item a {
+        text-decoration: none;
+        position: relative;
+        top: 10px;
+        border-right: 1px solid #ccc;
+        color: #000;
+        padding: 0 10px;
+        font-weight: bold;
+        font-size: 14px;
+
+    }
+
+    #cycling {
+        padding-right: 80px;
+    }
+
+    #all-sports {
+        border-right: none;
+    }
+
+    #all-sports span {
+        position: relative;
+        top: 1px;
+        padding-left: 5px;
+    }
+
+    #img-bars {
+        position: relative;
+        top: 5px;
+    }
+
+
+    /* Article section */
+
+    #page-container {
+        margin-top: 20px;
+    }
+
+    #main-article {
+        width: 1100px;
+        margin: 0 auto;
+
+    }
+
+    #article-image {
+        float: left;
+        margin-right: 20px;
+    }
+
+
+    p,
+    #clock-date {
+        color: #818181;
+    }
+
+    a,
+    h2{
+        line-height: 1.4em;
+        font-size: 25px;
+        font-weight: bold;
+        color: #000;
+        text-decoration: none;
+    }
+
+    h2:hover,
+    h2:focus {
+        color: #11687a;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    a,
+    h5{
+        line-height: 1.4em;
+        font-weight: bold;
+        color: #000;
+        text-decoration: none;
+    }
+
+    h5:hover,
+    h5:focus {
+        color: #11687a;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    #main-article-container{
+        border-right: 1px solid #ccc;
+        float: left;
+        width: 750px;
+        padding-right: 5px;
+    }
+
+    #article-container {
+
+        float: left;
+
+    }
+
+    #article-category {
+        color: green;
+        font-size: 15px;
+        border-left: 1px solid #ccc;
+        padding: 0 10px;
+    }
+
+    #article-summary {
+        position: relative;
+        top: -17px;
+    }
+
+    #article-category:hover,
+    #article-category:focus {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    #clock {
+        position: relative;
+        top: 5px;
+    }
+
+    #clock-date {
+        padding: 0 5px;
+    }
+
+    .sub-articles {
+        float: left;
+        width: 240px;
+    }
+
+    .sub-articles {
+        padding-right: 10px;
+    }
+
+    #sub-article-summary h3 {
+        line-height: 1.4em;
+        font-weight: bold;
+    }
+
+    #sub-article-summary h3:hover,
+    #sub-article-summary h3:focus {
+        color: #11687a;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    #comment-icon {
+        position: relative;
+        top: 10px;
+        padding-right: 5px;
+    }
+
+    #comment-no {
+        position: relative;
+        top: 5px;
+    }
+
+    #comment-icon:hover,
+    #comment-icon:focus,
+    #comment-no:hover,
+    #comment-no:focus {
+        cursor: pointer;
+    }
+    #right-article{
+        position: relative;
+        left: 20px;
+    }
+    #article-hr{
+        border: 1px solid #ccc;
+        margin: 10px 0;
+    }
+    #img-gossip{
+        float: left;
+        margin-right: 10px;
+    }
+</style>
+
+<body>
+    <div id="navbar-top" class="container">
+        <img id="logo" src="images/logo.png" alt="">
+
+        <div id="signin-div" class="topbar-section">
+            <img id="signin-image" src="images/signin.png" alt="">
+            <span id="signin-text">Sign in</span>
+        </div>
+        <div class="topbar-menu topbar-section">
+            News
+        </div>
+        <div class="topbar-menu topbar-section">
+            Sport
+        </div>
+        <div class="topbar-menu topbar-section">
+            Weather
+        </div>
+        <div class="topbar-menu topbar-section">
+            Shop
+        </div>
+        <div class="topbar-menu topbar-section">
+            Earth
+        </div>
+        <div class="topbar-menu topbar-section">
+            Travel
+        </div>
+        <div class="topbar-menu topbar-section">
+            More
+            <img id="more-dropdown-arrow" src="images/drop.png" alt="">
+        </div>
+        <div class="topbar-menu topbar-section">
+            <input id="search-input" type="text" value="Search">
+            <input id="search-magnify" type="image" src="images/search.png" alt="">
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <!-- largerbar -->
+    <div class="middlebar">
+        <div class="menubar">
+            <h1>SPORT</h1>
+        </div>
+    </div>
+
+    <div class="menu middlebar">
+        <div class="menubar">
+            <div class="menu-item">
+                <a href="">Home</a>
+                <a href="">Football</a>
+                <a href="">Formula 1</a>
+                <a href="">Cricket</a>
+                <a href="">Rugby U</a>
+                <a href="">Tennis</a>
+                <a href="">Golf</a>
+                <a href="">Athletics</a>
+                <a id="cycling" href="">Cycling</a>
+                <a href="">FIFA World Cup</a>
+                <a id="all-sports" href="">
+                    <img id="img-bars" src="images/bars.png" alt="">
+                    <span id="">All Sports</span>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="page-container" class="container">
+        <div id="main-article-container">
+            <div id="main-article">
+                <div id="article-container">
+
+                    <div id="article-image">
+                        <img src="images/Screen Shot 2018-05-23 at 17.44.33.png" alt="">
+                    </div>
+
+                    <div id="article-summary">
+                        <a href="">
+                            <h2>I want Arsenal to be among Europe's elite - new boss Emery</h2>
+                        </a>
+                        <p>New Arsenal manager Unai Emery says he wants the club to be among Europe's elite once more.</p>
+
+                        <img id="clock" src="images/clock.png" alt="">
+                        <span id="clock-date">1d</span>
+                        <a href="#" id="article-category">Football</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="clear"></div>
+
+            <div id="sub-articles-container">
+                <div class="sub-articles">
+                    <img src="images/kloop.png" alt="">
+                    <div id="sub-article-summary">
+                        <h3>A demanding father and a radical coach - the making of Jurgen flopp</h3>
+                        <img id="clock" src="images/clock.png" alt="">
+                        <span id="clock-date">2d</span>
+                        <a href="#" id="article-category">European Football</a>
+                        <br>
+                        <img id="comment-icon" src="images/comment.png" alt="">
+                        <span id="comment-no">477</span>
+                    </div>
+
+                </div>
+
+                <div class="sub-articles">
+                    <img src="images/nfl.png" alt="">
+                    <div id="sub-article-summary">
+                        <h3>NFL clubs to be fined if players kneel</h3>
+                        <img id="clock" src="images/clock.png" alt="">
+                        <span id="clock-date">1d</span>
+                        <a href="#" id="article-category" style="color: red;">BBC News</a>
+                        <br>
+
+                    </div>
+
+                </div>
+                <div class="sub-articles">
+                    <img src="images/team.png" alt="">
+                    <div id="sub-article-summary">
+                        <h3>'Women are the most beautiful thing in the world' - Hamilton back Monaco 'grid girls' return</h3>
+                        <img id="clock" src="images/clock.png" alt="">
+                        <span id="clock-date">1d</span>
+                        <a href="#" id="article-category">Formula 1</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="clear"></div> -->
+        <div id="right-article">
+            <img src="images/Screen Shot 2018-05-23 at 17.44.48.png" alt="">
+            <a href="#"><h2>BBC Women's Footballer of the Year 2018</h2></a>
+            <p>Voting for the BBC Women's Footballer of the Year 2018 is now closed - but check out the five contenders.</p>
+           
+            <hr id="article-hr">
+            <div class="gossip">
+                <img id="img-gossip" src="images/gossip.png" alt="">
+                <a href="#"><h5>GOSSIP: The latest football rumours</h5></a>
+            </div>
+            <div class="gossip">
+                    <img id="img-gossip" src="images/gosip.png" alt="">
+                    <a href="#"><h5>Formula 1 gossip column</h5></a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
